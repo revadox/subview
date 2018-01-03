@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ExtraView" id="iN0-l3-epB" customClass="ExtraView" customModule="calender" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="190"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is XIb file view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np8-km-mxh">
+                    <rect key="frame" x="69" y="78" width="237" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.43431739069999997" green="0.86562448569999995" blue="0.92262386659999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Np8-km-mxh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="69" id="Clk-NK-dzi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Np8-km-mxh" secondAttribute="trailing" constant="114" id="Ecl-My-F3K"/>
+                <constraint firstItem="Np8-km-mxh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Mly-zs-fNN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="ExtraLabel" destination="Np8-km-mxh" id="3ao-J3-kpA"/>
+            </connections>
+            <point key="canvasLocation" x="63" y="6"/>
+        </view>
+    </objects>
+</document>

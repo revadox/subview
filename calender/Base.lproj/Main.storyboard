@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,73 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calender" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGj-BT-HEi">
+                                <rect key="frame" x="109" y="201" width="156" height="30"/>
+                                <state key="normal" title="Option 1"/>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d2X-V9-4Sb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcx-v2-sRi">
+                                <rect key="frame" x="109" y="329" width="156" height="30"/>
+                                <state key="normal" title="Option 3"/>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4jV-eB-23D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYl-eh-aVW">
+                                <rect key="frame" x="109" y="268" width="156" height="30"/>
+                                <state key="normal" title="Option 2"/>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="769-SB-4hj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wYl-eh-aVW" firstAttribute="trailing" secondItem="mcx-v2-sRi" secondAttribute="trailing" id="5ag-lu-xpT"/>
+                            <constraint firstItem="eGj-BT-HEi" firstAttribute="trailing" secondItem="wYl-eh-aVW" secondAttribute="trailing" id="7Z0-xh-ERk"/>
+                            <constraint firstItem="mcx-v2-sRi" firstAttribute="top" secondItem="wYl-eh-aVW" secondAttribute="bottom" constant="31" id="9Lr-bG-fVT"/>
+                            <constraint firstItem="eGj-BT-HEi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="181" id="Iqu-OX-HoA"/>
+                            <constraint firstItem="wYl-eh-aVW" firstAttribute="top" secondItem="eGj-BT-HEi" secondAttribute="bottom" constant="37" id="Yj1-SK-S4c"/>
+                            <constraint firstItem="eGj-BT-HEi" firstAttribute="leading" secondItem="wYl-eh-aVW" secondAttribute="leading" id="hyu-w6-bNa"/>
+                            <constraint firstItem="wYl-eh-aVW" firstAttribute="leading" secondItem="mcx-v2-sRi" secondAttribute="leading" id="vhP-HC-i1J"/>
+                            <constraint firstItem="eGj-BT-HEi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wgk-QC-JKX"/>
+                            <constraint firstItem="eGj-BT-HEi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="zVX-RX-QYz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="labelSubView" destination="4tq-oM-XbB" id="eee-Mu-cUq"/>
+                        <outlet property="subView" destination="STU-BB-8DN" id="img-KW-rPW"/>
+                        <outletCollection property="optionButton" destination="eGj-BT-HEi" collectionClass="NSMutableArray" id="03a-tW-UWy"/>
+                        <outletCollection property="optionButton" destination="wYl-eh-aVW" collectionClass="NSMutableArray" id="fmr-VR-sbL"/>
+                        <outletCollection property="optionButton" destination="mcx-v2-sRi" collectionClass="NSMutableArray" id="xsE-x4-cFf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="STU-BB-8DN">
+                    <rect key="frame" x="0.0" y="0.0" width="377" height="110"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="this is sub view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tq-oM-XbB">
+                            <rect key="frame" x="59" y="41" width="195" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.43271095669999998" blue="0.38537166649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <viewLayoutGuide key="safeArea" id="41a-q1-76p"/>
+                </view>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
