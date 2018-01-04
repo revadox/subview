@@ -16,6 +16,8 @@
 		7D46E7281FFCA30D00CD10F6 /* calenderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46E7271FFCA30D00CD10F6 /* calenderUITests.swift */; };
 		7D46E7361FFCBE0100CD10F6 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D46E7351FFCBE0100CD10F6 /* View.xib */; };
 		7D46E73E1FFCDB1100CD10F6 /* ExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46E73D1FFCDB1100CD10F6 /* ExtraView.swift */; };
+		7D46E7401FFCEC6E00CD10F6 /* slider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D46E73F1FFCEC6E00CD10F6 /* slider.xib */; };
+		7D46E7421FFCEC9C00CD10F6 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D46E7411FFCEC9C00CD10F6 /* SliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		7D46E7291FFCA30D00CD10F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D46E7351FFCBE0100CD10F6 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		7D46E73D1FFCDB1100CD10F6 /* ExtraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraView.swift; sourceTree = "<group>"; };
+		7D46E73F1FFCEC6E00CD10F6 /* slider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = slider.xib; sourceTree = "<group>"; };
+		7D46E7411FFCEC9C00CD10F6 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +107,11 @@
 			children = (
 				7D46E7071FFCA30C00CD10F6 /* AppDelegate.swift */,
 				7D46E7091FFCA30C00CD10F6 /* ViewController.swift */,
+				7D46E7411FFCEC9C00CD10F6 /* SliderView.swift */,
 				7D46E73D1FFCDB1100CD10F6 /* ExtraView.swift */,
 				7D46E70B1FFCA30C00CD10F6 /* Main.storyboard */,
 				7D46E7351FFCBE0100CD10F6 /* View.xib */,
+				7D46E73F1FFCEC6E00CD10F6 /* slider.xib */,
 				7D46E70E1FFCA30C00CD10F6 /* Assets.xcassets */,
 				7D46E7101FFCA30C00CD10F6 /* LaunchScreen.storyboard */,
 				7D46E7131FFCA30C00CD10F6 /* Info.plist */,
@@ -238,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D46E7401FFCEC6E00CD10F6 /* slider.xib in Resources */,
 				7D46E7361FFCBE0100CD10F6 /* View.xib in Resources */,
 				7D46E7121FFCA30C00CD10F6 /* LaunchScreen.storyboard in Resources */,
 				7D46E70F1FFCA30C00CD10F6 /* Assets.xcassets in Resources */,
@@ -267,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D46E70A1FFCA30C00CD10F6 /* ViewController.swift in Sources */,
+				7D46E7421FFCEC9C00CD10F6 /* SliderView.swift in Sources */,
 				7D46E73E1FFCDB1100CD10F6 /* ExtraView.swift in Sources */,
 				7D46E7081FFCA30C00CD10F6 /* AppDelegate.swift in Sources */,
 			);
@@ -435,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GTYZNRXZG9;
 				INFOPLIST_FILE = calender/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Obj.calender;
@@ -449,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GTYZNRXZG9;
 				INFOPLIST_FILE = calender/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Obj.calender;

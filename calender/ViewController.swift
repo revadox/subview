@@ -8,9 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIScrollViewDelegate {
 
-   
+    @IBOutlet var subViewPageController: UIPageControl!
+    
+    @IBOutlet var scrollView: UIScrollView!
+    
     @IBOutlet var subView: UIView!
     
     @IBOutlet var labelSubView: UILabel!
@@ -18,6 +21,10 @@ class ViewController: UIViewController {
     
     @IBOutlet var optionButton: [UIButton]!//uibutton collection property so any change like color font apply to all three button
     
+    let user1 = ["name":"user1","image":"user1"]
+    let user2 = ["name":"user1","image":"user3"]
+    
+    var userArray = [Dictionary<String,String>]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +32,16 @@ class ViewController: UIViewController {
         for button in optionButton {
             button.setTitleColor(#colorLiteral(red: 1, green: 0.4327109567, blue: 0.3853716665, alpha: 1), for: .normal)//change color of all three button
         }
+        
+        userArray = [user1,user2]
+        scrollView.isPagingEnabled = true//it is enable page like slider support
+        scrollView.contentSize = CGSize(width:self.view.bounds.width * CGFloat(userArray.count)  ,height:191)//height is fixed but width is like one page so if we have 3 screen then (width of one screen*3)
+        scrollView.showsHorizontalScrollIndicator = false
+        
+        scrollView.delegate = self
+        
+        dataLoad()
+        
 //        self.view.addSubview(subView)//add subview
 //        labelSubView.textColor =  #colorLiteral(red: 0.5289530693, green: 1, blue: 0.9960366176, alpha: 1)
 //
@@ -47,23 +64,42 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    func dataLoad() {
+        
+        for (index,user) in userArray.enumerated() {
+            
+            if let subview = Bundle.main.loadNibNamed("slider", owner: self, options: nil)?.first as? SliderView {
+                subview.imageView.image = UIImage(named : user["image"]!)
+                subview.labelScroll.text = user["name"]
+                
+                scrollView.addSubview(subview)
+                subview.frame.size.width = self.view.bounds.size.width
+                subview.frame.origin.x = CGFloat(index) * self.view.bounds.size.width
+                
+            }
+            
+        }
+        
+    }
 
     @IBAction func tapButton(_ sender: UIButton) {
-//        here all there button connect with same tapButton
-//        if all connect with same buttton how can we know which button pressed????
-//        two way....
-//        1 way
+        
+        //        here all there button connect with same tapButton
+        //        if all connect with same buttton how can we know which button pressed????
+        //        two way....
+        //        1 way
         
         let button  = sender //make object of button and cast to UIButton
         
-//        print(((button.titleLabel?.text!)! as Any))
+        //        print(((button.titleLabel?.text!)! as Any))
         
         if button.titleLabel?.text! == "Option 1" {
             print("hey you are here")
             button.setTitle("you tap this", for: .normal)
         }
             
-//             2 way:- give tag first then direct access
+            //             2 way:- give tag first then direct access
         else if button.tag == 1 {
             
             button.setTitle("you tap this", for: .normal)
@@ -74,6 +110,11 @@ class ViewController: UIViewController {
             button.setTitle("you tap this", for: .normal)
             
         }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let page = scrollView.contentOffset.x / scrollView.frame.size.width
+        subViewPageController.currentPage = Int(page)
     }
     
     override func didReceiveMemoryWarning() {

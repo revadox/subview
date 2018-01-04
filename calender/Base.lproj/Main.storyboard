@@ -25,13 +25,6 @@
                                     <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d2X-V9-4Sb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcx-v2-sRi">
-                                <rect key="frame" x="109" y="329" width="156" height="30"/>
-                                <state key="normal" title="Option 3"/>
-                                <connections>
-                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4jV-eB-23D"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYl-eh-aVW">
                                 <rect key="frame" x="109" y="268" width="156" height="30"/>
                                 <state key="normal" title="Option 2"/>
@@ -39,24 +32,43 @@
                                     <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="769-SB-4hj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcx-v2-sRi">
+                                <rect key="frame" x="133" y="329" width="108" height="30"/>
+                                <state key="normal" title="Option 3"/>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4jV-eB-23D"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oaB-GN-vhl">
+                                <rect key="frame" x="0.0" y="476" width="375" height="191"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="2Uc-tY-1D1">
+                                <rect key="frame" x="160" y="431" width="55" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.94264086790000001" green="0.76623470490000001" blue="0.57032996920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.91069507599999999" green="0.4216598272" blue="0.09082780033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wYl-eh-aVW" firstAttribute="trailing" secondItem="mcx-v2-sRi" secondAttribute="trailing" id="5ag-lu-xpT"/>
-                            <constraint firstItem="eGj-BT-HEi" firstAttribute="trailing" secondItem="wYl-eh-aVW" secondAttribute="trailing" id="7Z0-xh-ERk"/>
-                            <constraint firstItem="mcx-v2-sRi" firstAttribute="top" secondItem="wYl-eh-aVW" secondAttribute="bottom" constant="31" id="9Lr-bG-fVT"/>
-                            <constraint firstItem="eGj-BT-HEi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="181" id="Iqu-OX-HoA"/>
-                            <constraint firstItem="wYl-eh-aVW" firstAttribute="top" secondItem="eGj-BT-HEi" secondAttribute="bottom" constant="37" id="Yj1-SK-S4c"/>
-                            <constraint firstItem="eGj-BT-HEi" firstAttribute="leading" secondItem="wYl-eh-aVW" secondAttribute="leading" id="hyu-w6-bNa"/>
-                            <constraint firstItem="wYl-eh-aVW" firstAttribute="leading" secondItem="mcx-v2-sRi" secondAttribute="leading" id="vhP-HC-i1J"/>
-                            <constraint firstItem="eGj-BT-HEi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wgk-QC-JKX"/>
-                            <constraint firstItem="eGj-BT-HEi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="zVX-RX-QYz"/>
+                            <constraint firstItem="eGj-BT-HEi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Jd-5E-3PT"/>
+                            <constraint firstItem="eGj-BT-HEi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="NoB-S9-C3y"/>
+                            <constraint firstItem="wYl-eh-aVW" firstAttribute="centerX" secondItem="mcx-v2-sRi" secondAttribute="centerX" id="Sdd-Re-y5b"/>
+                            <constraint firstItem="mcx-v2-sRi" firstAttribute="top" secondItem="wYl-eh-aVW" secondAttribute="bottom" constant="31" id="YbA-qc-GCb"/>
+                            <constraint firstItem="mcx-v2-sRi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="dJI-3G-9C0"/>
+                            <constraint firstItem="eGj-BT-HEi" firstAttribute="trailing" secondItem="wYl-eh-aVW" secondAttribute="trailing" id="l7h-hU-As3"/>
+                            <constraint firstItem="eGj-BT-HEi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="181" id="lts-On-LGc"/>
+                            <constraint firstItem="eGj-BT-HEi" firstAttribute="leading" secondItem="wYl-eh-aVW" secondAttribute="leading" id="nJp-Oe-70K"/>
+                            <constraint firstItem="wYl-eh-aVW" firstAttribute="top" secondItem="eGj-BT-HEi" secondAttribute="bottom" constant="37" id="xnn-4g-ziG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="labelSubView" destination="4tq-oM-XbB" id="eee-Mu-cUq"/>
+                        <outlet property="scrollView" destination="oaB-GN-vhl" id="GMz-ce-aNQ"/>
                         <outlet property="subView" destination="STU-BB-8DN" id="img-KW-rPW"/>
+                        <outlet property="subViewPageController" destination="2Uc-tY-1D1" id="t4H-2j-3wL"/>
                         <outletCollection property="optionButton" destination="eGj-BT-HEi" collectionClass="NSMutableArray" id="03a-tW-UWy"/>
                         <outletCollection property="optionButton" destination="wYl-eh-aVW" collectionClass="NSMutableArray" id="fmr-VR-sbL"/>
                         <outletCollection property="optionButton" destination="mcx-v2-sRi" collectionClass="NSMutableArray" id="xsE-x4-cFf"/>
